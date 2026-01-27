@@ -1,0 +1,419 @@
+.profileContainer {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: var(--spacing-xl);
+}
+
+/* ============================================
+   PROFILE HEADER
+   ============================================ */
+.profileHeader {
+    background: var(--color-card-bg);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    margin-bottom: var(--spacing-xl);
+    box-shadow: var(--shadow-card);
+}
+
+.profileInfo {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-xl);
+}
+
+.avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    font-size: var(--font-size-3xl);
+    font-weight: 700;
+    flex-shrink: 0;
+    box-shadow: var(--shadow-md);
+}
+
+.userDetails {
+    flex: 1;
+    min-width: 0;
+}
+
+.userName {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--color-text);
+    line-height: var(--line-height-tight);
+}
+
+.userEmail {
+    color: var(--color-text-muted);
+    margin: 0 0 var(--spacing-sm) 0;
+    font-size: var(--font-size-sm);
+}
+
+.userMeta {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-sm);
+    flex-wrap: wrap;
+}
+
+.roleBadge {
+    display: inline-block;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    background: var(--color-primary);
+    color: var(--color-text);
+    border-radius: var(--radius-full);
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+/* ============================================
+   STATS SECTION
+   ============================================ */
+.stats {
+    display: flex;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+    padding-top: var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+}
+
+.statItem {
+    text-align: center;
+    cursor: pointer;
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-radius: var(--radius-lg);
+    transition: all var(--transition-fast);
+    min-width: 80px;
+}
+
+.statItem:hover {
+    background: var(--color-background-secondary);
+    transform: translateY(-2px);
+}
+
+.statValue {
+    font-size: var(--font-size-2xl);
+    font-weight: 700;
+    color: var(--color-text);
+    display: block;
+    margin-bottom: var(--spacing-xs);
+}
+
+.statLabel {
+    font-size: var(--font-size-sm);
+    color: var(--color-text-muted);
+    display: block;
+}
+
+/* ============================================
+   FOLLOW BUTTON
+   ============================================ */
+.followButton {
+    margin-top: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-lg);
+    border-radius: var(--radius-full);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+    border: 2px solid var(--color-primary);
+}
+
+.followButton.following {
+    background: transparent;
+    color: var(--color-primary);
+}
+
+.followButton.following:hover {
+    background: rgba(245, 158, 11, 0.1);
+}
+
+.followButton.notFollowing {
+    background: var(--color-primary);
+    color: var(--color-text);
+}
+
+.followButton.notFollowing:hover {
+    background: var(--color-primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+/* ============================================
+   TABS NAVIGATION
+   ============================================ */
+.tabs {
+    display: flex;
+    gap: var(--spacing-xs);
+    margin-bottom: var(--spacing-lg);
+    background: var(--color-card-bg);
+    padding: var(--spacing-xs);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+}
+
+.tab {
+    flex: 1;
+    padding: var(--spacing-sm) var(--spacing-md);
+    background: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    cursor: pointer;
+    border-radius: var(--radius-md);
+    transition: all var(--transition-fast);
+    text-align: center;
+}
+
+.tab:hover {
+    color: var(--color-text);
+    background: var(--color-background-secondary);
+}
+
+.tab.active {
+    color: var(--color-text);
+    background: var(--color-primary);
+}
+
+/* ============================================
+   POSTS GRID
+   ============================================ */
+.postsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+}
+
+.postCard {
+    background: var(--color-card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    transition: all var(--transition-normal);
+    cursor: pointer;
+}
+
+.postCard:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-card-hover);
+}
+
+.postImage {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    background: var(--color-background-tertiary);
+}
+
+.postContent {
+    padding: var(--spacing-md);
+}
+
+.postTitle {
+    font-weight: 600;
+    font-size: var(--font-size-base);
+    margin: 0 0 var(--spacing-sm) 0;
+    color: var(--color-text);
+    line-height: var(--line-height-tight);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.postMeta {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+    display: flex;
+    gap: var(--spacing-md);
+}
+
+/* ============================================
+   USERS LIST (Followers/Following)
+   ============================================ */
+.usersList {
+    background: var(--color-card-bg);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+}
+
+.userItem {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: all var(--transition-fast);
+}
+
+.userItem:last-child {
+    border-bottom: none;
+}
+
+.userItem:hover {
+    background: var(--color-background-secondary);
+}
+
+.userAvatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-primary-dark));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    flex-shrink: 0;
+}
+
+.userItemInfo {
+    flex: 1;
+    min-width: 0;
+}
+
+.userItemName {
+    font-weight: 600;
+    color: var(--color-text);
+    font-size: var(--font-size-base);
+    margin-bottom: var(--spacing-xs);
+}
+
+.userItemDate {
+    font-size: var(--font-size-xs);
+    color: var(--color-text-muted);
+}
+
+/* ============================================
+   EMPTY STATE
+   ============================================ */
+.emptyState {
+    text-align: center;
+    padding: var(--spacing-3xl);
+    color: var(--color-text-muted);
+    background: var(--color-card-bg);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-card);
+    font-size: var(--font-size-lg);
+}
+
+/* ============================================
+   LOADING & ERROR STATES
+   ============================================ */
+.loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-3xl);
+    color: var(--color-text-muted);
+    font-size: var(--font-size-lg);
+}
+
+.error {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--color-error);
+    background: rgba(220, 38, 38, 0.05);
+    border: 2px solid rgba(220, 38, 38, 0.2);
+    border-radius: var(--radius-lg);
+    font-size: var(--font-size-lg);
+}
+
+/* ============================================
+   RESPONSIVE DESIGN
+   ============================================ */
+@media (max-width: 768px) {
+    .profileContainer {
+        padding: var(--spacing-md);
+    }
+
+    .profileHeader {
+        padding: var(--spacing-lg);
+    }
+
+    .profileInfo {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+        font-size: var(--font-size-2xl);
+    }
+
+    .userName {
+        font-size: var(--font-size-xl);
+    }
+
+    .userMeta {
+        justify-content: center;
+    }
+
+    .stats {
+        justify-content: center;
+    }
+
+    .statItem {
+        min-width: 70px;
+        padding: var(--spacing-xs) var(--spacing-sm);
+    }
+
+    .statValue {
+        font-size: var(--font-size-xl);
+    }
+
+    .tabs {
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        min-width: calc(33.333% - var(--spacing-xs));
+    }
+
+    .postsGrid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+}
+
+@media (max-width: 480px) {
+    .profileContainer {
+        padding: var(--spacing-sm);
+    }
+
+    .profileHeader {
+        padding: var(--spacing-md);
+    }
+
+    .stats {
+        gap: var(--spacing-sm);
+    }
+
+    .statItem {
+        min-width: 60px;
+    }
+
+    .statValue {
+        font-size: var(--font-size-lg);
+    }
+
+    .statLabel {
+        font-size: var(--font-size-xs);
+    }
+}
