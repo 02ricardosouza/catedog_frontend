@@ -1,13 +1,9 @@
-version: '3.8'
-
 services:
   frontend:
-    build: .
+    image: blog_tcc_frontend:latest
     container_name: animal_blog_frontend
     ports:
-      - "${FRONTEND_PORT:-80}:80"
-    environment:
-      - VITE_API_URL=${VITE_API_URL:-http://localhost:3000}
+      - "${FRONTEND_PORT:-8001}:80"
     restart: unless-stopped
     healthcheck:
       test: [ "CMD", "wget", "--no-verbose", "--tries=1", "--spider", "http://localhost:80/" ]
